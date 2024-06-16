@@ -25,7 +25,7 @@ class Darkmode:
         self.temp_pdfs = []
         self.first_page_image = None
 
-    def pdf_to_png(self, dpi_count: int = 300) -> None:
+    def pdf_to_png(self, dpi_count: int) -> None:
         for file in self.pdfs:
             try:
                 pages = convert_from_path(
