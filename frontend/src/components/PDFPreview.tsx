@@ -10,7 +10,7 @@ const Icons = {
 
 interface PDFPreviewProps {
   imageFileUrl: string | null;
-  pdfFileUrl: string | null; // New prop to hold the PDF file URL
+  pdfFileUrl: string | null;
   isConverting: boolean;
 }
 
@@ -44,29 +44,23 @@ const PDFPreview = ({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col items-center justify-center gap-8">
       {isConverting ? (
-        <Icons.spinner className="h-7 w-7 animate-spin text-white m-auto" />
+        <Icons.spinner className="h-7 w-7 animate-spin text-white m-auto mb-[8px]" />
       ) : imageFileUrl ? (
-        <div className="flex flex-col items-center justify-center gap-8">
-          <Image
-            width={0}
-            height={0}
-            sizes="90vw"
-            src={`http://127.0.0.1:8000${imageFileUrl}`}
-            alt="Converted PDF First Page"
-            className="rounded-2xl mx-auto flex max-w-screen-sm"
-            style={{ width: "100%", height: "auto" }}
-          />
-          <Button
-            onClick={handleDownload}
-            disabled={!pdfFileUrl}
-            variant="outline"
-          >
-            Download PDF
-          </Button>
-        </div>
+        <Image
+          width={0}
+          height={0}
+          sizes="90vw"
+          src={`http://127.0.0.1:8000${imageFileUrl}`}
+          alt="Converted PDF First Page"
+          className="rounded-2xl mx-auto flex max-w-screen-sm"
+          style={{ width: "100%", height: "auto" }}
+        />
       ) : null}
+      <Button onClick={handleDownload} disabled={!pdfFileUrl} variant="outline">
+        Download PDF
+      </Button>
     </div>
   );
 };

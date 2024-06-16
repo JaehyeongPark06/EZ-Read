@@ -28,7 +28,7 @@ const PDFHandler = ({
   setIsConverting,
 }: PDFHandlerProps) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [quality, setQuality] = useState<string>("low");
+  const [quality, setQuality] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleButtonClick = () => {
@@ -44,7 +44,7 @@ const PDFHandler = ({
   };
 
   const handleConvert = async () => {
-    if (!selectedFile) return;
+    if (!selectedFile || !quality) return;
 
     const formData = new FormData();
     formData.append("file", selectedFile);
@@ -102,7 +102,11 @@ const PDFHandler = ({
         </Select>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <Button variant="destructive" onClick={handleConvert}>
+        <Button
+          variant="destructive"
+          onClick={handleConvert}
+          disabled={!selectedFile || !quality}
+        >
           Convert
         </Button>
       </div>
