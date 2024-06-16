@@ -33,30 +33,21 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 
 ### High Quality
 
-Conversion of PDF to PNGs: 4.54 seconds
-
-Processing with multiprocessing: 5.64 seconds (1 batch)
-
-Processing with threading: 0.00 seconds (1 batch)
-
-Repacking PDFs: 0.00 seconds
+- **Conversion of PDF to PNGs**: 4.54 seconds
+- **Processing with multiprocessing**: 5.64 seconds (1 batch)
+- **Processing with threading**: 0.00 seconds (1 batch)
+- **Repacking PDFs**: 0.00 seconds
 
 ### Medium Quality
 
-Conversion of PDF to PNGs: 2.39 seconds
-
-Processing with multiprocessing: 3.06 seconds (1 batch)
-
-Processing with threading: 0.00 seconds (1 batch)
-
-Repacking PDFs: 0.00 seconds
+- **Conversion of PDF to PNGs**: 2.39 seconds
+- **Processing with multiprocessing**: 3.06 seconds (1 batch)
+- **Processing with threading**: 0.00 seconds (1 batch)
+- **Repacking PDFs**: 0.00 seconds
 
 ### Low Quality
 
-Conversion of PDF to PNGs: 0.81 seconds
-
-Processing with multiprocessing: 1.43 seconds (1 batch)
-
-Processing with threading: 0.00 seconds (1 batch)
-
-Repacking PDFs: 0.00 seconds
+- **Conversion of PDF to PNGs**: 0.81 seconds
+- **Processing with multiprocessing**: 1.43 seconds (1 batch)
+- **Processing with threading**: 0.00 seconds (1 batch)
+- **Repacking PDFs**: 0.00 seconds
