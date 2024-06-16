@@ -29,4 +29,34 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 
 ## Stats
 
+**NOTE: All benchmarks below were tested using a 1 page PDF with an image and using Python={3.12.3}. Additionally, times were recorded using the inubilt logging and time library in Python.**
 
+### High Quality
+
+Conversion of PDF to PNGs: 4.54 seconds
+
+Processing with multiprocessing: 5.64 seconds (1 batch)
+
+Processing with threading: 0.00 seconds (1 batch)
+
+Repacking PDFs: 0.00 seconds
+
+### Medium Quality
+
+Conversion of PDF to PNGs: 2.39 seconds
+
+Processing with multiprocessing: 3.06 seconds (1 batch)
+
+Processing with threading: 0.00 seconds (1 batch)
+
+Repacking PDFs: 0.00 seconds
+
+### Low Quality
+
+Conversion of PDF to PNGs: 0.81 seconds
+
+Processing with multiprocessing: 1.43 seconds (1 batch)
+
+Processing with threading: 0.00 seconds (1 batch)
+
+Repacking PDFs: 0.00 seconds
