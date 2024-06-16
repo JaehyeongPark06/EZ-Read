@@ -1,0 +1,4 @@
+.DS_Store
+.temp_*
+backend/__pycache__
+backend/temp_*
