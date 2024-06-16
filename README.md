@@ -1,6 +1,6 @@
 # EZ Read
 
-![Image of a random converted pdf](https://github.com/JaehyeongPark06/EZ-Read/assets/78674944/f35aae10-9c93-4a27-9cf9-1a3616f8b60c)
+![Image of a random converted pdf](https://github.com/JaehyeongPark06/EZ-Read/assets/78674944/7c40f674-d33a-4b35-bfc5-13417649ae1c)
 
 ## About
 
