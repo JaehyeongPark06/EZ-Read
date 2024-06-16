@@ -1,3 +1,4 @@
+# Heavily modified version of https://github.com/JustinTheWhale/PDF-Dark-Mode/
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.responses import FileResponse
 import os
