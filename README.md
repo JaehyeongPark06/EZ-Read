@@ -13,7 +13,7 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 - FastAPI
 - NumPy
 - Pillow
-- Numba (optimized compiler)
+- Numba (Jit)
 - OpenCV
 
 ### Web
