@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse, FileResponse
 import os
 import shutil
 import logging
-from darkmode import Darkmode, main as darkmode_main
+from darkmode import main as darkmode_main
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
