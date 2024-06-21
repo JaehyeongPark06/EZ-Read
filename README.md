@@ -26,6 +26,7 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 
 - Using a different language for the converter, Python is a bit slow
 - Detecting images and text when converting
+- Making final PDF size smaller
 
 ## Stats
 
