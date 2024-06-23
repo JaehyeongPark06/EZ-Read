@@ -26,28 +26,15 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 
 - Using a different language for the converter, Python is a bit slow
 - Detecting images and text when converting
+- Making final PDF size smaller
 
 ## Stats
 
-**NOTE: All benchmarks below were tested using a 1 page PDF with an image and using Python={3.12.3}. Additionally, times were recorded using the inubilt logging and time library in Python.**
+**NOTE: All benchmarks below were tested using a 1 page PDF with an image and using Python={3.12.3}. Times were recorded using the inubilt logging and time library in Python.**
 
-### High Quality
+| Quality Level | Conversion of PDF to PNGs (seconds) | Processing with multiprocessing (seconds) | Processing with threading (seconds) | Repacking PDFs (seconds) |
+|---------------|-------------------------------------|--------------------------------------------|-------------------------------------|--------------------------|
+| High          | 4.54                                | 5.64                                       | 0.00                                | 0.00                     |
+| Medium        | 2.39                                | 3.06                                       | 0.00                                | 0.00                     |
+| Low           | 0.81                                | 1.43                                       | 0.00                                | 0.00                     |
 
-- **Conversion of PDF to PNGs**: 4.54 seconds
-- **Processing with multiprocessing**: 5.64 seconds (1 batch)
-- **Processing with threading**: 0.00 seconds (1 batch)
-- **Repacking PDFs**: 0.00 seconds
-
-### Medium Quality
-
-- **Conversion of PDF to PNGs**: 2.39 seconds
-- **Processing with multiprocessing**: 3.06 seconds (1 batch)
-- **Processing with threading**: 0.00 seconds (1 batch)
-- **Repacking PDFs**: 0.00 seconds
-
-### Low Quality
-
-- **Conversion of PDF to PNGs**: 0.81 seconds
-- **Processing with multiprocessing**: 1.43 seconds (1 batch)
-- **Processing with threading**: 0.00 seconds (1 batch)
-- **Repacking PDFs**: 0.00 seconds
