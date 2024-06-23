@@ -38,6 +38,11 @@ const PDFHandler = ({
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      if (file.size > 10 * 1024 * 1024) {
+        // 10MB limit
+        alert("File size exceeds 10MB limit.");
+        return;
+      }
       setFileName(file.name);
       setSelectedFile(file);
     }
@@ -57,9 +62,10 @@ const PDFHandler = ({
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
-      const { pdf_url, image_url } = response.data;
+
+      const { pdf_url, first_page_url } = response.data;
       setPdfFileUrl(pdf_url); // Set the PDF file URL
-      setImageFileUrl(image_url);
+      setImageFileUrl(first_page_url);
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.error("Axios error uploading file:", error);
@@ -74,6 +80,9 @@ const PDFHandler = ({
   return (
     <div className="flex flex-col gap-4 w-full">
       <div className="flex flex-col w-full items-center gap-2">
+        <div className="w-full text-sm text-white font-normal text-center">
+          10 MB max
+        </div>
         <Button variant="secondary" onClick={handleButtonClick}>
           Browse
         </Button>
@@ -84,6 +93,7 @@ const PDFHandler = ({
           className="hidden"
           onChange={handleFileChange}
         />
+
         <div className="w-full text-base text-white font-normal text-center mt-2">
           {selectedFile ? selectedFile.name : "No file selected"}
         </div>
@@ -91,7 +101,7 @@ const PDFHandler = ({
           <SelectTrigger className="w-[180px] my-2">
             <SelectValue placeholder="Select quality" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="w-[180px] my-2">
             <SelectGroup>
               <SelectLabel>Qualities</SelectLabel>
               <SelectItem value="high">High</SelectItem>

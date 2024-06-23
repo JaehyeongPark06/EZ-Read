@@ -4,3 +4,4 @@ backend/__pycache__
 backend/temp_*
 frontend/node_modules
 frontend/.next
+backend/.env

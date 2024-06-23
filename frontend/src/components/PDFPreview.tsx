@@ -22,7 +22,9 @@ const PDFPreview = ({
   const handleDownload = async () => {
     if (!pdfFileUrl) return;
 
-    const response = await fetch(`http://127.0.0.1:8000${pdfFileUrl}`);
+    const response = await fetch(pdfFileUrl);
+
+    console.log(response);
     if (!response.ok) {
       console.error("Failed to download PDF");
       return;
@@ -30,9 +32,9 @@ const PDFPreview = ({
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
 
-    // Save as oriignal file name with converted suffix
-    let filename = pdfFileUrl.split("/").pop() || "converted.pdf";
-    filename = filename.replace("_download_temp_", "").replace("temp_", "");
+    // Extract filename from URL without query string
+    const urlParts = pdfFileUrl.split("?")[0].split("/");
+    const filename = urlParts[urlParts.length - 1];
 
     const a = document.createElement("a");
     a.href = url;
@@ -52,10 +54,11 @@ const PDFPreview = ({
           width={0}
           height={0}
           sizes="90vw"
-          src={`http://127.0.0.1:8000${imageFileUrl}`}
+          src={imageFileUrl}
           alt="Converted PDF First Page"
           className="rounded-2xl mx-auto flex max-w-screen-sm"
           style={{ width: "100%", height: "auto" }}
+          placeholder="empty"
         />
       ) : null}
       <Button onClick={handleDownload} disabled={!pdfFileUrl} variant="outline">
