@@ -21,6 +21,7 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 - Next.js 14 (app router)
 - Tailwind CSS
 - shadcn ui
+- AWS S3
 
 ## Possible Improvements
 
