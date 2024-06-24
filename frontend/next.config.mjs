@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "ezread.s3.amazonaws.com",
+        hostname: "bucket_name.s3.amazonaws.com",
         port: "",
         pathname: "/**",
       },
