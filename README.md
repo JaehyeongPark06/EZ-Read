@@ -10,18 +10,18 @@ A tool that converts PDFs to dark mode in seconds while preserving their origina
 
 ### Converter
 
-- FastAPI
-- NumPy
-- Pillow
-- Numba (Jit)
-- OpenCV
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [NumPy](https://numpy.org/)
+- [Pillow](https://python-pillow.org/)
+- [Numba (Jit)](https://numba.pydata.org/)
+- [OpenCV](https://opencv.org/)
 
 ### Web
 
-- Next.js 14 (app router)
-- Tailwind CSS
-- shadcn ui
-- AWS S3
+- [Next.js 14 (app router)](https://nextjs.org/docs/app)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.dev/)
+- [AWS S3](https://aws.amazon.com/s3/)
 
 ## Possible Improvements
 
